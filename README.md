@@ -23,8 +23,8 @@
 
 
 
-## Begin: Phase 1: 
-#### How to download the data from internet  
+## Phase 1: 
+#### How to download the data from internet: 
 
 -------
 
