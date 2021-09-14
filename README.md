@@ -4,7 +4,9 @@
 ## Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
 --------------------------
 
-## [The Setup for the project](https://virtualenv.pypa.io/en/latest/installation.html)
+## The Setup for the project
+
+### [Install Virtual Environment](https://virtualenv.pypa.io/en/latest/installation.html)
 --------------------------
 * Setup Brew: [Brew](https://brew.sh/)
 * Setup oh my zsh: [Zsh](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/)
@@ -21,6 +23,8 @@
 
 
 
-## Begin: 
+## Begin: Phase 1: 
+#### How to download the data from internet  
+
 -------
 
