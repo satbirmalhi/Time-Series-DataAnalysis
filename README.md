@@ -36,6 +36,7 @@
 
     3.
 
-## [Linear Regression with python]()
+## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)
+
 -------
 
