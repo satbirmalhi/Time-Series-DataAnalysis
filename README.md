@@ -4,14 +4,15 @@
 ## Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
 --------------------------
 
-## The Setup for the project
-
-### [Install Virtual Environment](https://virtualenv.pypa.io/en/latest/installation.html)
+## The Collaboration Setup for the project
 --------------------------
 * Setup Brew: [Brew](https://brew.sh/)
 * Setup oh my zsh: [Zsh](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/)
 * Setup git and github:[git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
     * git [cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
+----------------------------------------------------------------------------------
+### [Install Virtual Environment](https://virtualenv.pypa.io/en/latest/installation.html)
 * Setup virtual Environment:[Virtual Environment]()
     * Install:  brew and update it
     * pipx install pyenv-virtualenv 
