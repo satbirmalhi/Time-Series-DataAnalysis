@@ -1,7 +1,7 @@
 # Time Series DataAnalysis 
 >keep similing while writting codes
 --------------------------
-## Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
+## How to write README.md: Using Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
 --------------------------
 
 ## The Collaboration Setup for the project
@@ -13,14 +13,14 @@
 
 ----------------------------------------------------------------------------------
 ### [Install Virtual Environment](https://virtualenv.pypa.io/en/latest/installation.html)
-    * Install:  brew and update it
-    * pipx install pyenv-virtualenv 
-    * Check: virtualenv ---version 
-    * virtualenv -p python3.9 <name_of_virtualenv>
-    * Activate: $source ./<name_of_virtualenv>/bin/activate
-    * Check: python3 --version
-    * Deactivate: $deactivate
-    
+* Install:  brew and update it
+* pipx install pyenv-virtualenv 
+* Check: virtualenv ---version 
+* virtualenv -p python3.9 <name_of_virtualenv>
+* Activate: $source ./<name_of_virtualenv>/bin/activate
+* Check: python3 --version
+* Deactivate: $deactivate
+
 
 
 ---------------------------------------------------------------------
