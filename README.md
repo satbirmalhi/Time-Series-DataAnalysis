@@ -17,7 +17,7 @@
 * pipx install pyenv-virtualenv 
 * Check: virtualenv ---version 
 * virtualenv -p python3.9 <name_of_virtualenv>
-* Activate: $source ./<name_of_virtualenv>/bin/activate
+* Activate: 'source ./<name_of_virtualenv>/bin/activate'
 * Check: python3 --version
 * Deactivate: $deactivate
 
