@@ -24,8 +24,8 @@
 
 
 ---------------------------------------------------------------------
-## Phase 1: Cleaning data 
-#### How to download data from the internet: 
+## Task 1: Cleaning data 
+#### 1. How to download data from the internet: 
     1. Using Quandl
         1. "import quandl,math, datetime"
         2. quandl.ApiConfig.api_key = "Token" 
@@ -34,7 +34,15 @@
     2. * Using DataReader *
         1. 'df = web.DataReader('<ticker>', 'yahoo', start=start_date, end=end_date)'
 
-    3.
+### 2. How to clean the data ?
+    1. Remvoning NAN values?
+    2. Removing strings values?
+### 3. How to scale the data ?
+
+### 4. How to plot the data ?
+
+### 5. Find a best way to visualize this data set ?
+
 
 ## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)
 
