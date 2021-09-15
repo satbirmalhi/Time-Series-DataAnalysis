@@ -13,7 +13,6 @@
 
 ----------------------------------------------------------------------------------
 ### [Install Virtual Environment](https://virtualenv.pypa.io/en/latest/installation.html)
-* Setup virtual Environment:[Virtual Environment]()
     * Install:  brew and update it
     * pipx install pyenv-virtualenv 
     * Check: virtualenv ---version 
