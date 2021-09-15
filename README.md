@@ -10,7 +10,8 @@
 --------------------------
 * Setup Brew: [Brew](https://brew.sh/)
 * Setup oh my zsh: [Zsh](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/)
-* Setup git and github:[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+* Setup git and github:[git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+    * git [cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
 * Setup virtual Environment:[Virtual Environment]()
     * Install:  brew and update it
     * pipx install pyenv-virtualenv 
@@ -22,9 +23,19 @@
     
 
 
+---------------------------------------------------------------------
+## Phase 1: Cleaning data 
+#### How to download data from the internet: 
+    1. Using Quandl
+        1. "import quandl,math, datetime"
+        2. quandl.ApiConfig.api_key = "Token" 
+        3. "df=quandl.get("WIKI/GOOGL")"
 
-## Phase 1: 
-#### How to download the data from internet: 
+    2. * Using DataReader *
+        1. 'df = web.DataReader('<ticker>', 'yahoo', start=start_date, end=end_date)'
 
+    3.
+
+## [Linear Regression with python]()
 -------
 
