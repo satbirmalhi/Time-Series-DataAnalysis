@@ -21,12 +21,18 @@
 * Check: `python3 --version`
 * Deactivate: `deactivate`
 
+#### Python Libraries:
+    import pandas as pd
+    import pandas_datareader.data as web
+    from datetime import datetime, timedelta
+    import matplotlib.pyplot as plt
+    import numpy as np
 
 
 ---------------------------------------------------------------------
-## Task 1: Cleaning data 
+## Task 1: Data Management
 #### 1. How to download data from the internet: 
-    1. Using Quandl
+1. Using Quandl
         1. `import quandl,math, datetime`
         2. `quandl.ApiConfig.api_key = "Token`
         3. `df=quandl.get("WIKI/GOOGL")`
@@ -35,8 +41,8 @@
         1. `df = web.DataReader('<ticker>', 'yahoo', start=start_date, end=end_date)`
 
 ### 2. How to clean the data ?
-    1. Remvoning NAN values?
-    2. Removing strings values?
+1. Remvoning NAN values?
+2. Removing strings values?
 ### 3. How to scale the data ?
 
 ### 4. How to plot the data ?
