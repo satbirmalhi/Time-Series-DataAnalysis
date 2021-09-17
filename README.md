@@ -24,7 +24,8 @@
 * To install new packages: `pip install <name of the package>`
 * Copy local packages to requirements.txt: `pip freeze --local > requirements.txt`
 * Check: `cat requirements.txt`
-* 
+* git push requirement.txt to github
+* To get all the package in your virtualenv: `pip install -r requirements.txt`
 
 #### Python Libraries:
     import pandas as pd
