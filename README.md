@@ -14,12 +14,17 @@
 ----------------------------------------------------------------------------------
 ### [Install Virtual Environment](https://virtualenv.pypa.io/en/latest/installation.html)
 * Install:  brew and update it
-* pipx install pyenv-virtualenv 
-* Check: `virtualenv ---version` 
+* `pip3  install virtualenv`
+* Check all the package in your global machine: `pip3 list` 
+* Check: `virtualenv --version` 
 * `virtualenv -p python3.9 <name_of_virtualenv>`
-* Activate: `source ./<name_of_virtualenv>/bin/activate`
-* Check: `python3 --version`
-* Deactivate: `deactivate`
+* Activate: `source ./<name_of_virtualenv>/bin/activate`d
+* Check which python is active: `which python `
+* Deactivate when switch to another the application: `deactivate`
+* To install new packages: `pip install <name of the package>`
+* Copy local packages to requirements.txt: `pip freeze --local > requirements.txt`
+* Check: `cat requirements.txt`
+* 
 
 #### Python Libraries:
     import pandas as pd
