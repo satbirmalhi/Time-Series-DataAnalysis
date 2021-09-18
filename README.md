@@ -12,13 +12,13 @@ presentations to promote applied mathematical concepts such as a differential eq
 Fourier Analysis in data science across the campus.
 ------------------------------
 # Table of contents
-1. [Introduction](#infrastructure)
+1. [Framework](#infrastructure)
 2. [Data importation](#Data-importation)
     1. [Web scraping](#Web-scraping)
 3. [Linear Regression](#Linear-Regression)
 
 -----------------------------
-## infrastructure<a name="infrastructure"></a>
+## Framework<a name="infrastructure"></a>
 
 ## How to write README.md: Using Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
    --------------------------
@@ -85,13 +85,13 @@ Fourier Analysis in data science across the campus.
 ## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)<a name="Linear-Regression"></a>
 
 -[] Convert date into numnerical values:
-y = np.asarray(data_df['<yvalue>'])
-X = df[['date']]
-X_train, X_test, y_train, y_test = train_test_split             
-(X,y,train_size=.7,random_state=42)
-model = LinearRegression() #create linear regression object
-model.fit(X_train, y_train) #train model on train data
-model.score(X_train, y_train)
+    y = np.asarray(data_df['<yvalue>'])
+    X = df[['date']]
+    X_train, X_test, y_train, y_test = train_test_split             
+    (X,y,train_size=.7,random_state=42)
+    model = LinearRegression() #create linear regression object
+    model.fit(X_train, y_train) #train model on train data
+    model.score(X_train, y_train)
 -------
 
 
