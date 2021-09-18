@@ -84,7 +84,7 @@ Fourier Analysis in data science across the campus.
 
 ## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)<a name="Linear-Regression"></a>
 
--[] Convert date into numnerical values:
+* Convert date into numnerical values:
     
     y = np.asarray(data_df['<yvalue>'])
     X = df[['date']]
