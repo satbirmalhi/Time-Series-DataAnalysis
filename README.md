@@ -20,11 +20,11 @@ Fourier Analysis in data science across the campus.
 -----------------------------
 ## Framework<a name="infrastructure"></a>
 
-### How to write README.md: Using Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
+### How to write README.md: 
+* [Using Markdow Cheat](https://www.markdownguide.org/cheat-sheet/)
    --------------------------
 
 ### The Collaboration Setup for the project
---------------------------
 * Setup Brew: [Brew](https://brew.sh/)
 * Setup oh my zsh: [Zsh](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/)
 * Setup git and github:[git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
