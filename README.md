@@ -17,12 +17,12 @@ Fourier Analysis in data science across the campus.
     1. [Web scraping](#Web-scraping)
 3. [Linear Regression](#Linear-Regression)
 
------------------------------
-## Framework<a name="infrastructure"></a>
+------------------------------------------------------------------
+## Framework <a name="infrastructure"></a>
 
-### How to write README.md: 
-* [Using Markdow Cheat](https://www.markdownguide.org/cheat-sheet/)
-   --------------------------
+### How to write README.md 
+* Using Markdow [Cheat](https://www.markdownguide.org/cheat-sheet/)
+-------------------------------------------------------------------
 
 ### The Collaboration Setup for the project
 * Setup Brew: [Brew](https://brew.sh/)
