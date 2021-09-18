@@ -1,6 +1,20 @@
 # Time Series DataAnalysis 
 >keep similing while writting codes
+>Description: In this project, we will study the use of statistical models and methods for
+analyzing time-series data and their applications such as stock market prediction, monthly
+unemployment figures, quarterly crime rates, and annual birth rates, etc. The main focus of this
+project is on the understanding of the fundamental concepts of time series modeling. The
+following models will be the main center of our research: stationary and nonstationary,
+nonseasonal and seasonal, intervention and outlier, transfer function, regression time series,
+and vector time series models. We will also implement these models in forecasting and
+inference of the real world’s problems. We are also planning to prepare a series of students’
+presentations to promote applied mathematical concepts such as a differential equation and
+Fourier Analysis in data science across the campus.
 --------------------------
+
+Table Contents:
+- [Project infrastructure](#)
+
 ## How to write README.md: Using Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
 --------------------------
 
@@ -63,5 +77,34 @@
 
 ## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)
 
+-[] Convert date into numnerical values:
+
+y = np.asarray(data_df['<yvalue>'])
+X = df[['date']]
+X_train, X_test, y_train, y_test = train_test_split             
+(X,y,train_size=.7,random_state=42)
+model = LinearRegression() #create linear regression object
+model.fit(X_train, y_train) #train model on train data
+model.score(X_train, y_train)
 -------
 
+
+
+
+# Table of contents
+1. [Introduction](#introduction)
+2. [Some paragraph](#paragraph1)
+    1. [Sub paragraph](#subparagraph1)
+3. [Another paragraph](#paragraph2)
+
+## This is the introduction <a name="introduction"></a>
+Some introduction text, formatted in heading 2 style
+
+## Some paragraph <a name="paragraph1"></a>
+The first paragraph text
+
+### Sub paragraph <a name="subparagraph1"></a>
+This is a sub paragraph, formatted in heading 3 style
+
+## Another paragraph <a name="paragraph2"></a>
+The second paragraph text
