@@ -20,10 +20,10 @@ Fourier Analysis in data science across the campus.
 -----------------------------
 ## Framework<a name="infrastructure"></a>
 
-## How to write README.md: Using Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
+### How to write README.md: Using Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
    --------------------------
 
-## The Collaboration Setup for the project
+### The Collaboration Setup for the project
 --------------------------
 * Setup Brew: [Brew](https://brew.sh/)
 * Setup oh my zsh: [Zsh](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/)
@@ -85,6 +85,7 @@ Fourier Analysis in data science across the campus.
 ## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)<a name="Linear-Regression"></a>
 
 -[] Convert date into numnerical values:
+    
     y = np.asarray(data_df['<yvalue>'])
     X = df[['date']]
     X_train, X_test, y_train, y_test = train_test_split             
