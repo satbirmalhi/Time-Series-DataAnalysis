@@ -10,13 +10,18 @@ and vector time series models. We will also implement these models in forecastin
 inference of the real world’s problems. We are also planning to prepare a series of students’
 presentations to promote applied mathematical concepts such as a differential equation and
 Fourier Analysis in data science across the campus.
---------------------------
+------------------------------
+# Table of contents
+1. [Introduction](#infrastructure)
+2. [Data importation](#Data-importation)
+    1. [Web scraping](#Web-scraping)
+3. [Linear Regression](#Linear-Regression)
 
-Table Contents:
-- [Project infrastructure](#)
+-----------------------------
+## infrastructure<a name="infrastructure"></a>
 
 ## How to write README.md: Using Markdow Cheat: [Cheatme](https://www.markdownguide.org/cheat-sheet/)
---------------------------
+   --------------------------
 
 ## The Collaboration Setup for the project
 --------------------------
@@ -50,7 +55,9 @@ Table Contents:
 
 
 ---------------------------------------------------------------------
-## Task 1: Data Management
+## Data importation<a name="Data-importation"></a>
+
+### Task 1: Data Management
 #### 1. How to download data from the internet: 
 1. Using Quandl
     1. `import quandl,math, datetime`
@@ -75,10 +82,9 @@ Table Contents:
 #### 6. Find a best way to visualize this data set ?
 
 
-## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)
+## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)<a name="Linear-Regression"></a>
 
 -[] Convert date into numnerical values:
-
 y = np.asarray(data_df['<yvalue>'])
 X = df[['date']]
 X_train, X_test, y_train, y_test = train_test_split             
@@ -91,20 +97,3 @@ model.score(X_train, y_train)
 
 
 
-# Table of contents
-1. [Introduction](#introduction)
-2. [Some paragraph](#paragraph1)
-    1. [Sub paragraph](#subparagraph1)
-3. [Another paragraph](#paragraph2)
-
-## This is the introduction <a name="introduction"></a>
-Some introduction text, formatted in heading 2 style
-
-## Some paragraph <a name="paragraph1"></a>
-The first paragraph text
-
-### Sub paragraph <a name="subparagraph1"></a>
-This is a sub paragraph, formatted in heading 3 style
-
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
