@@ -89,7 +89,7 @@ Fourier Analysis in data science across the campus.
     ```
     2. 
     ```
-    ts = pd.Series(np.asarray(df["Adj Close"]),index=pd.date_range("1/1/2015", periods=len(np.asarray(df["Adj Close"]))))
+    ts = pd.Series(np.asarray(df["<column name>"]),index=pd.date_range("1/1/2015", periods=len(np.asarray(df["<column name>"]))))
     ts.plot()
     ```
 
