@@ -78,9 +78,21 @@ Fourier Analysis in data science across the campus.
 1. Remvoning NAN values?
 2. Removing strings values?
 #### 5. [How to plot the data](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)?
-```
+* Basic plotting
+    1.  
+    ```
+    df["<column name>"].plot()
+    plt.legend(loc=4)
+    plt.xlabel("Date")
+    plt.ylabel("Price")
+    plt.show()
+    ```
+    2. 
+    ```
+    ts = pd.Series(np.asarray(df["Adj Close"]),index=pd.date_range("1/1/2015", periods=len(np.asarray(df["Adj Close"]))))
+    ts.plot()
+    ```
 
-```
 
 
 
