@@ -79,19 +79,21 @@ Fourier Analysis in data science across the campus.
 2. Removing strings values?
 #### 5. How to plot the data ?
 
+
 #### 6. Find a best way to visualize this data set ?
 
 
 ## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)<a name="Linear-Regression"></a>
 
 * Convert date into numnerical values:
-    y = np.asarray(data_df['<yvalue>'])
+```  y = np.asarray(data_df['<yvalue>'])
     X = df[['date']]
     X_train, X_test, y_train, y_test = train_test_split             
     (X,y,train_size=.7,random_state=42)
     model = LinearRegression() #create linear regression object
     model.fit(X_train, y_train) #train model on train data
     model.score(X_train, y_train)
+```
 -------
 
 
