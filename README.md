@@ -37,7 +37,7 @@ Fourier Analysis in data science across the campus.
 * Check all the package in your global machine: `pip3 list` 
 * Check: `virtualenv --version` 
 * `virtualenv -p python3.9 <name_of_virtualenv>`
-* Activate: `source ./<name_of_virtualenv>/bin/activate`d
+* Activate: `source ./<name_of_virtualenv>/bin/activate`
 * Check which python is active: `which python `
 * Deactivate when switch to another the application: `deactivate`
 * To install new packages: `pip install <name of the package>`
@@ -85,7 +85,6 @@ Fourier Analysis in data science across the campus.
 ## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)<a name="Linear-Regression"></a>
 
 * Convert date into numnerical values:
-    
     y = np.asarray(data_df['<yvalue>'])
     X = df[['date']]
     X_train, X_test, y_train, y_test = train_test_split             
