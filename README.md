@@ -77,7 +77,10 @@ Fourier Analysis in data science across the campus.
 #### 5. How to clean the data ?
 1. Remvoning NAN values?
 2. Removing strings values?
-#### 5. How to plot the data ?
+#### 5. [How to plot the data](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)?
+```
+
+```
 
 
 
