@@ -79,6 +79,7 @@ Fourier Analysis in data science across the campus.
 2. Removing strings values?
 #### 5. [How to plot the data](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)?
 * Basic plotting
+
     1.  
     ```
     df["<column name>"].plot()
