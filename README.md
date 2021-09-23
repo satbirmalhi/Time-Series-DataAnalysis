@@ -45,7 +45,13 @@ Fourier Analysis in data science across the campus.
 * Check: `cat requirements.txt`
 * git push requirement.txt to github
 * To get all the package in your virtualenv: `pip install -r requirements.txt`
-
+### Adding virtual enviroment into gitignore 
+* `touch .gitignore`
+* open .gitignore file and write the name of the files you want to ignore
+* `git status`
+* `git add .`
+* `git commit -m "adding git ignore in working directory"`
+* `git push`
 #### Python Libraries:
 ```   import pandas as pd
     import pandas_datareader.data as web
