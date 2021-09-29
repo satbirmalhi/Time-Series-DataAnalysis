@@ -127,14 +127,12 @@ Fourier Analysis in data science across the campus.
     ```
     * The chocie of Y:
     ```
-    Y=df["Close"]
+    Y=df["Close"].values
     ```
 
 
-* Convert date into numnerical values:
+* Fitting th Data into the model:
 ```
-Y = np.asarray(data_df['<yvalue>'])
-X = df[['x_value']]
 X_train, X_test, Y_train, Y_test = train_test_split             
 (X,y,train_size=.7,random_state=42)
 model = LinearRegression() #create linear regression object
