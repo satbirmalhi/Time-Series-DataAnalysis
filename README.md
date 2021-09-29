@@ -53,7 +53,8 @@ Fourier Analysis in data science across the campus.
 * `git commit -m "adding git ignore in working directory"`
 * `git push`
 #### Python Libraries:
-```   import pandas as pd
+```  
+    import pandas as pd
     import pandas_datareader.data as web
     from datetime import datetime, timedelta
     import matplotlib.pyplot as plt
@@ -71,7 +72,14 @@ Fourier Analysis in data science across the campus.
     3. `df=quandl.get("WIKI/GOOGL")`
 
 2. *Using DataReader*
-    1. `df = web.DataReader('<ticker>', 'yahoo', start=start_date, end=end_date)`
+    1. 
+    ``` 
+    start_date = datetime(2015,1,1)
+    end_date = datetime(2021,1,1)
+    ticker = "AAPL"
+    df = web.DataReader(ticker, 'yahoo', start=start_date, end=end_date)
+    print(df)
+    ```
 
 #### 2. How to print/show the data in jupyternotebok?
 1. `df.head()`
@@ -81,23 +89,23 @@ Fourier Analysis in data science across the campus.
 #### 4. [How to how to read the data from your local machine of csv file?](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)
 1. `pd.read_csv('Name_file.csv', index_col=0)`
 #### 5. How to clean the data ?
-1. Remvoning NAN values?
-2. Removing strings values?
-#### 5. [How to plot the data](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)?
+1. [Remvoning NAN values](https://datatofish.com/check-nan-pandas-dataframe/): `df.isnull().values.any()`
+2. [Removing strings values](https://stackoverflow.com/questions/33413249/how-to-remove-string-value-from-column-in-pandas-dataframe)
+#### 5. [How to plot the data](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)
 * Basic plotting
 
     1.  
     ```
-    df["<column name>"].plot()
-    plt.legend(loc=4)
-    plt.xlabel("Date")
-    plt.ylabel("Price")
-    plt.show()
+        df["<column name>"].plot()
+        plt.legend(loc=4)
+        plt.xlabel("Date")
+        plt.ylabel("Price")
+        plt.show()
     ```
     2. 
     ```
-    ts = pd.Series(np.asarray(df["<column name>"]),index=pd.date_range("1/1/2015", periods=len(np.asarray(df["<column name>"]))))
-    ts.plot()
+        ts = pd.Series(np.asarray(df["<column name>"]),index=pd.date_range("1/1/2015", periods=len(np.asarray(df["<column name>"]))))
+        ts.plot()
     ```
 
 
