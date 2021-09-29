@@ -123,7 +123,7 @@ Fourier Analysis in data science across the campus.
     df = df.reset_index()
     df['Date'] = pd.to_datetime(df['Date'])
     df['Date']=df['Date'].map(dt.datetime.toordinal)
-    X=df["Date"].values
+    X=df["Date"].values.reshape(-1, 1)
     ```
     * The chocie of Y:
     ```
@@ -133,12 +133,13 @@ Fourier Analysis in data science across the campus.
 
 * Fitting th Data into the model:
 ```
-X_train, X_test, Y_train, Y_test = train_test_split             
-(X,y,train_size=.7,random_state=42)
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y,train_size=.7,random_state=42)
 model = LinearRegression() #create linear regression object
 model.fit(X_train, Y_train) #train model on train data
-model.score(X_train, Y_train)
+accuracy=model.score(X_test,Y_test)
 ```
+* Forcasting: `forecast_set=model.predict(X_future)`
+
 -------
 
 
