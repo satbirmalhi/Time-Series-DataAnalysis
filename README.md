@@ -116,6 +116,21 @@ Fourier Analysis in data science across the campus.
 
 ## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)<a name="Linear-Regression"></a>
 
+* Choose X and Y 
+    * The choice of X:
+    ```
+    import datetime as dt
+    df = df.reset_index()
+    df['Date'] = pd.to_datetime(df['Date'])
+    df['Date']=df['Date'].map(dt.datetime.toordinal)
+    X=df["Date"].values
+    ```
+    * The chocie of Y:
+    ```
+    Y=df["Close"]
+    ```
+
+
 * Convert date into numnerical values:
 ```
 Y = np.asarray(data_df['<yvalue>'])
