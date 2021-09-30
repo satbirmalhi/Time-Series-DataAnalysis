@@ -138,7 +138,19 @@ model = LinearRegression() #create linear regression object
 model.fit(X_train, Y_train) #train model on train data
 accuracy=model.score(X_test,Y_test)
 ```
-* Forcasting: `forecast_set=model.predict(X_future)`
+* One day Forcasting:
+    * What day?
+    ```
+    l=len(X)-1
+    day=1
+    X_future=np.array(X[l])+day
+    X_future
+    ```
+    * 
+    ```
+     forecast_set=model.predict(X_future)
+     print(forecast_set)
+     ```
 
 -------
 
