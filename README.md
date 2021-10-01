@@ -121,9 +121,9 @@ Fourier Analysis in data science across the campus.
     ```
     import datetime as dt
     df = df.reset_index()
-    df['Date'] = pd.to_datetime(df['Date'])
-    df['Date']=df['Date'].map(dt.datetime.toordinal)
-    X=df["Date"].values.reshape(-1, 1)
+    df_reset['Date'] = pd.to_datetime(df_reset['Date'])
+    df_reset['Date']=df_reset['Date'].map(dt.datetime.toordinal)
+    X=df_reset["Date"].values.reshape(-1, 1)
     ```
     * The chocie of Y:
     ```
@@ -141,9 +141,8 @@ accuracy=model.score(X_test,Y_test)
 * One day Forcasting:
     * What day?
     ```
-    l=len(X)-1
-    day=1
-    X_future=np.array(X[l])+day
+    day = 1
+    X_future=np.array(X[-1:])+day
     X_future
     ```
     * 
@@ -151,7 +150,7 @@ accuracy=model.score(X_test,Y_test)
      forecast_set=model.predict(X_future)
      print(forecast_set)
      ```
-
+* How to do this for 30 days??
 -------
 
 
