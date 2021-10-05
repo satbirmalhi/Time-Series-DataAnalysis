@@ -55,10 +55,16 @@ Fourier Analysis in data science across the campus.
 #### Python Libraries:
 ```  
     import pandas as pd
+    import datetime
     import pandas_datareader.data as web
     from datetime import datetime, timedelta
     import matplotlib.pyplot as plt
     import numpy as np
+    import datetime as dt
+    from sklearn.linear_model import LinearRegression
+    from sklearn.model_selection import train_test_split
+    import mpld3
+    mpld3.enable_notebook()
 ```
 
 ---------------------------------------------------------------------
@@ -151,6 +157,42 @@ accuracy=model.score(X_test,Y_test)
      print(forecast_set)
      ```
 * How to do this for 30 days??
+    * Setting up last date and future date 
+    ```
+    df["prediction"]=np.nan
+    df_reset = df.reset_index()
+    last_date=df.iloc[-1].name
+    future_date= last_date+pd.DateOffset(days=30)
+    ```
+    * Creat data set from last date to final date
+    ```
+    s=pd.date_range(last_date, future_date, freq='D').to_series()
+    d=s.dt.weekday
+    df_future = pd.DataFrame(data=d,columns=['days'])
+    df_future.index.name = 'Date'
+    df_future.drop(df_future.index[df_future['days'] == 0], inplace = True)
+    df_future.drop(df_future.index[df_future['days'] == 6], inplace = True)
+
+    ```
+    * Getting prediction data from our model
+    ```
+    df_future_reset = df_future.reset_index()
+    df_future_reset['DateNummeric'] = pd.to_datetime(df_future_reset['Date'])
+    df_future_reset['DateNummeric']=df_future_reset['Date'].map(dt.datetime.toordinal)
+    X_future=df_future_reset["DateNummeric"].values.reshape(-1, 1)
+    forecast_set=model.predict(X_future)
+    df_future["prediction"]=forecast_set
+    ```
+    * 
+    ```
+    df_future["Close"] = np.nan 
+    df_past= df[["Close","prediction"]]
+    result = pd.concat([df_past,df_future])
+    ````
+    * ploting the resutl
+    ```
+    result.plot()
+    ```
 -------
 
 
