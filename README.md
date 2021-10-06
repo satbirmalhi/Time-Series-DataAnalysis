@@ -16,6 +16,7 @@ Fourier Analysis in data science across the campus.
 2. [Data importation](#Data-importation)
     1. [Web scraping](#Web-scraping)
 3. [Linear Regression](#Linear-Regression)
+4. [Time Series Analysis](#time-series) 
 
 ------------------------------------------------------------------
 ## Framework <a name="infrastructure"></a>
@@ -193,7 +194,11 @@ accuracy=model.score(X_test,Y_test)
     ```
     result.plot()
     ```
--------
+------------------------------------------------------------------------------------------------
+## Time Sereis Analysis <a name="time-series"></a>
+
+#### [What is time Series Analysis]() 
+#### [ Autocorrelation and Partial Autocorrelation](https://machinelearningmastery.com/gentle-introduction-autocorrelation-partial-autocorrelation/)
 
 
 
