@@ -197,7 +197,7 @@ accuracy=model.score(X_test,Y_test)
 ------------------------------------------------------------------------------------------------
 ## Time Sereis Analysis <a name="time-series"></a>
 
-#### [What is time Series Analysis]() 
+#### [What is time Series Analysis](https://www.youtube.com/watch?v=chp71nEc320&t=13s) 
 #### [ Autocorrelation and Partial Autocorrelation](https://machinelearningmastery.com/gentle-introduction-autocorrelation-partial-autocorrelation/)
 
 
