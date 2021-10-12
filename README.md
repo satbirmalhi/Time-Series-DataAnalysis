@@ -199,6 +199,10 @@ accuracy=model.score(X_test,Y_test)
 
 #### [What is time Series Analysis](https://www.youtube.com/watch?v=chp71nEc320&t=13s) 
 #### [ Autocorrelation and Partial Autocorrelation](https://machinelearningmastery.com/gentle-introduction-autocorrelation-partial-autocorrelation/)
+{\bf  Autocorrelation}:  The autocorrelation coefficients measure the correlation observations at different distances apart. Recall the ordinary correlation coefficient of given $N$ observations on two variables $x$ and $y$ is 
+
+$$\rho=\frac{\sum\limits_{i=1}^N(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum\limits_{i=1}^N(x_i-\bar{x})^2\sum\limits_{i=1}^N(y_i-\bar{y})^2}}$$
+
 
 
 
