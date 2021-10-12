@@ -211,13 +211,15 @@ from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 ```
 df =pd.DataFrame({"a":[13,5,11,12,9,12,14,7,15]})
 ```
-4. # [ACF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.acf.html)
+4. ### [ACF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.acf.html)
     1. These codes will give us a array of correlation coefficient bewtweeen lags: ```array = acf(df["a"])```
     2. [Plot_ACF](https://www.statsmodels.org/dev/generated/statsmodels.graphics.tsaplots.plot_acf.html): These codes will give us a plot of the above array: `plot_acf(df["a"]])`
-5. # [PACF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.pacf.html)
-    1. These codes will give us a array of correlation coefficient bewtweeen lags: ```array = pacf(df["a"])```
+5. ### [PACF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.pacf.html)
+    1. These codes will give us a array of correlation coefficient bewtweeen lags: ```array = pacf(df["a"],lags=3)```
     2. These codes will give us a plot of the above array: `plot_pacf(df["a"], lags=3)`
 6. Now repeat the above codes with actual stock market data. 
+
+#### [What is Stationary time series](https://otexts.com/fpp2/stationarity.html)
 
 
 
