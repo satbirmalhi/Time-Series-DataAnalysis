@@ -199,9 +199,26 @@ accuracy=model.score(X_test,Y_test)
 
 #### [What is time Series Analysis](https://www.youtube.com/watch?v=chp71nEc320&t=13s) 
 #### [ Autocorrelation and Partial Autocorrelation](https://machinelearningmastery.com/gentle-introduction-autocorrelation-partial-autocorrelation/)
-{\bf  Autocorrelation}:  The autocorrelation coefficients measure the correlation observations at different distances apart. Recall the ordinary correlation coefficient of given $N$ observations on two variables $x$ and $y$ is 
+1. Create a new file with name ACF_and_PACF.pynb 
+2. Import the following libraries of pythons 
+```
+import pandas as pd
+import numpy as np
+from statsmodels.tsa.stattools import acf, pacf
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+```
+3. Lets first create a small pandas dataframe as 
+```
+df =pd.DataFrame({"a":[13,5,11,12,9,12,14,7,15]})
+```
+4. # [ACF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.acf.html)
+    1. These codes will give us a array of correlation coefficient bewtweeen lags: ```array = acf(df["a"])```
+    2. [Plot_ACF](https://www.statsmodels.org/dev/generated/statsmodels.graphics.tsaplots.plot_acf.html): These codes will give us a plot of the above array: `plot_acf(df["a"]])`
+5. # [PACF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.pacf.html)
+    1. These codes will give us a array of correlation coefficient bewtweeen lags: ```array = pacf(df["a"])```
+    2. These codes will give us a plot of the above array: `plot_pacf(df["a"], lags=3)`
+6. Now repeat the above codes with actual stock market data. 
 
-$$\rho=\frac{\sum\limits_{i=1}^N(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum\limits_{i=1}^N(x_i-\bar{x})^2\sum\limits_{i=1}^N(y_i-\bar{y})^2}}$$
 
 
 
