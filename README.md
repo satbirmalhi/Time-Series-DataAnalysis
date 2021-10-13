@@ -16,6 +16,7 @@ Fourier Analysis in data science across the campus.
 2. [Data importation](#Data-importation)
     1. [Web scraping](#Web-scraping)
 3. [Linear Regression](#Linear-Regression)
+4. [Time Series Analysis](#time-series) 
 
 ------------------------------------------------------------------
 ## Framework <a name="infrastructure"></a>
@@ -45,13 +46,26 @@ Fourier Analysis in data science across the campus.
 * Check: `cat requirements.txt`
 * git push requirement.txt to github
 * To get all the package in your virtualenv: `pip install -r requirements.txt`
-
+### Adding virtual enviroment into gitignore 
+* `touch .gitignore`
+* open .gitignore file and write the name of the files you want to ignore
+* `git status`
+* `git add .`
+* `git commit -m "adding git ignore in working directory"`
+* `git push`
 #### Python Libraries:
-```   import pandas as pd
+```  
+    import pandas as pd
+    import datetime
     import pandas_datareader.data as web
     from datetime import datetime, timedelta
     import matplotlib.pyplot as plt
     import numpy as np
+    import datetime as dt
+    from sklearn.linear_model import LinearRegression
+    from sklearn.model_selection import train_test_split
+    import mpld3
+    mpld3.enable_notebook()
 ```
 
 ---------------------------------------------------------------------
@@ -65,7 +79,14 @@ Fourier Analysis in data science across the campus.
     3. `df=quandl.get("WIKI/GOOGL")`
 
 2. *Using DataReader*
-    1. `df = web.DataReader('<ticker>', 'yahoo', start=start_date, end=end_date)`
+    1. 
+    ``` 
+    start_date = datetime(2015,1,1)
+    end_date = datetime(2021,1,1)
+    ticker = "AAPL"
+    df = web.DataReader(ticker, 'yahoo', start=start_date, end=end_date)
+    print(df)
+    ```
 
 #### 2. How to print/show the data in jupyternotebok?
 1. `df.head()`
@@ -75,23 +96,23 @@ Fourier Analysis in data science across the campus.
 #### 4. [How to how to read the data from your local machine of csv file?](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)
 1. `pd.read_csv('Name_file.csv', index_col=0)`
 #### 5. How to clean the data ?
-1. Remvoning NAN values?
-2. Removing strings values?
-#### 5. [How to plot the data](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)?
+1. [Remvoning NAN values](https://datatofish.com/check-nan-pandas-dataframe/): `df.isnull().values.any()`
+2. [Removing strings values](https://stackoverflow.com/questions/33413249/how-to-remove-string-value-from-column-in-pandas-dataframe)
+#### 5. [How to plot the data](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)
 * Basic plotting
 
     1.  
     ```
-    df["<column name>"].plot()
-    plt.legend(loc=4)
-    plt.xlabel("Date")
-    plt.ylabel("Price")
-    plt.show()
+        df["<column name>"].plot()
+        plt.legend(loc=4)
+        plt.xlabel("Date")
+        plt.ylabel("Price")
+        plt.show()
     ```
     2. 
     ```
-    ts = pd.Series(np.asarray(df["<column name>"]),index=pd.date_range("1/1/2015", periods=len(np.asarray(df["<column name>"]))))
-    ts.plot()
+        ts = pd.Series(np.asarray(df["<column name>"]),index=pd.date_range("1/1/2015", periods=len(np.asarray(df["<column name>"]))))
+        ts.plot()
     ```
 
 
@@ -102,17 +123,105 @@ Fourier Analysis in data science across the campus.
 
 ## [Linear Regression with python](https://www.kdnuggets.com/2019/03/beginners-guide-linear-regression-python-scikit-learn.html)<a name="Linear-Regression"></a>
 
-* Convert date into numnerical values:
+* Choose X and Y 
+    * The choice of X:
+    ```
+    import datetime as dt
+    df = df.reset_index()
+    df_reset['Date'] = pd.to_datetime(df_reset['Date'])
+    df_reset['Date']=df_reset['Date'].map(dt.datetime.toordinal)
+    X=df_reset["Date"].values.reshape(-1, 1)
+    ```
+    * The chocie of Y:
+    ```
+    Y=df["Close"].values
+    ```
+
+
+* Fitting th Data into the model:
 ```
-Y = np.asarray(data_df['<yvalue>'])
-X = df[['x_value']]
-X_train, X_test, Y_train, Y_test = train_test_split             
-(X,y,train_size=.7,random_state=42)
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y,train_size=.7,random_state=42)
 model = LinearRegression() #create linear regression object
 model.fit(X_train, Y_train) #train model on train data
-model.score(X_train, Y_train)
+accuracy=model.score(X_test,Y_test)
 ```
--------
+* One day Forcasting:
+    * What day?
+    ```
+    day = 1
+    X_future=np.array(X[-1:])+day
+    X_future
+    ```
+    * 
+    ```
+     forecast_set=model.predict(X_future)
+     print(forecast_set)
+     ```
+* How to do this for 30 days??
+    * Setting up last date and future date 
+    ```
+    df["prediction"]=np.nan
+    df_reset = df.reset_index()
+    last_date=df.iloc[-1].name
+    future_date= last_date+pd.DateOffset(days=30)
+    ```
+    * Creat data set from last date to final date
+    ```
+    s=pd.date_range(last_date, future_date, freq='D').to_series()
+    d=s.dt.weekday
+    df_future = pd.DataFrame(data=d,columns=['days'])
+    df_future.index.name = 'Date'
+    df_future.drop(df_future.index[df_future['days'] == 0], inplace = True)
+    df_future.drop(df_future.index[df_future['days'] == 6], inplace = True)
+
+    ```
+    * Getting prediction data from our model
+    ```
+    df_future_reset = df_future.reset_index()
+    df_future_reset['DateNummeric'] = pd.to_datetime(df_future_reset['Date'])
+    df_future_reset['DateNummeric']=df_future_reset['Date'].map(dt.datetime.toordinal)
+    X_future=df_future_reset["DateNummeric"].values.reshape(-1, 1)
+    forecast_set=model.predict(X_future)
+    df_future["prediction"]=forecast_set
+    ```
+    * 
+    ```
+    df_future["Close"] = np.nan 
+    df_past= df[["Close","prediction"]]
+    result = pd.concat([df_past,df_future])
+    ````
+    * ploting the resutl
+    ```
+    result.plot()
+    ```
+------------------------------------------------------------------------------------------------
+## Time Sereis Analysis <a name="time-series"></a>
+
+#### [What is time Series Analysis](https://www.youtube.com/watch?v=chp71nEc320&t=13s) 
+#### [ Autocorrelation and Partial Autocorrelation](https://machinelearningmastery.com/gentle-introduction-autocorrelation-partial-autocorrelation/)
+1. Create a new file with name ACF_and_PACF.pynb 
+2. Import the following libraries of pythons 
+```
+import pandas as pd
+import numpy as np
+from statsmodels.tsa.stattools import acf, pacf
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+```
+3. Lets first create a small pandas dataframe as 
+```
+df =pd.DataFrame({"a":[13,5,11,12,9,12,14,7,15]})
+```
+4. ### [ACF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.acf.html)
+    1. These codes will give us a array of correlation coefficient bewtweeen lags: ```array = acf(df["a"])```
+    2. [Plot_ACF](https://www.statsmodels.org/dev/generated/statsmodels.graphics.tsaplots.plot_acf.html): These codes will give us a plot of the above array: `plot_acf(df["a"]])`
+5. ### [PACF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.pacf.html)
+    1. These codes will give us a array of correlation coefficient bewtweeen lags: ```array = pacf(df["a"],lags=3)```
+    2. These codes will give us a plot of the above array: `plot_pacf(df["a"], lags=3)`
+6. Now repeat the above codes with actual stock market data. 
+
+#### [What is Stationary time series](https://otexts.com/fpp2/stationarity.html)
+
+
 
 
 
