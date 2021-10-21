@@ -225,8 +225,11 @@ The stationary time series has the following three properties
  - The variance of the series is constant 
  - There is no seasonality 
 1. #### Give the examples of non-stationary time series
-- Note: White noise is a stationary time series with mean zero
+    - Note: White noise is a stationary time series with mean zero
 2. #### Methods of finding the stationariry of a time series
+    - Visually 
+    - Golbal vs Local test 
+    - Augument Dickey -Fuller Test
 
 
 
@@ -234,4 +237,4 @@ The stationary time series has the following three properties
 
 
 
-ls
+
