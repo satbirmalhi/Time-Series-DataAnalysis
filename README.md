@@ -220,18 +220,27 @@ df =pd.DataFrame({"a":[13,5,11,12,9,12,14,7,15]})
 6. Now repeat the above codes with actual stock market data. 
 
 #### [What is Stationary time series](https://otexts.com/fpp2/stationarity.html)
-The stationary time series has the following three properties 
- - The mean values is constant 
- - The variance of the series is constant 
- - There is no seasonality 
+    
+- The stationary time series has the following three properties
+    - The mean values is constant 
+    - The variance of the series is constant 
+    - There is no seasonality 
+        - Note: White noise is a stationary time series with mean zero
 1. #### Give the examples of non-stationary time series
-    - Note: White noise is a stationary time series with mean zero
-2. #### Methods of finding the stationariry of a time series
+    
+2. #### Methods of finding the Stationarity of a time series
     - Visually 
     - Golbal vs Local test 
     - Augument Dickey -Fuller Test
 
+3. #### How to make a time series Stationary 
+    - If the mean is not constant: Take the derivative of the series
 
+4. #### [What are the unite roots]()
+
+5.  #### [What are the unite roots](https://www.statology.org/dickey-fuller-test-python/)
+    - Coding of dickey-fuller test
+        * 
 
 
 
