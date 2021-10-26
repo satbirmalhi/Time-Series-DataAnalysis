@@ -255,13 +255,14 @@ A unit root (also called a unit root process or a difference stationary process)
         import matplotlib.pyplot as plt
         import numpy as np
         from statsmodels.tsa.stattools import adfuller
-        
+
         ```
         * ADf 
         ```
-        df_adf = adfuller(series)
-        print('ADF Statistic: %f' % df_adf[0])
-        print('p-value: %f' % df_adf[1])
+        data = [3, 4, 4, 5, 6, 7, 6, 6, 7, 8, 9, 12, 10]
+        Result_adf = adfuller(data)
+        print('ADF Statistic: %f' % Result_adf[0])
+        print('p-value: %f' % Result_adf[1])
         ```
 
 
