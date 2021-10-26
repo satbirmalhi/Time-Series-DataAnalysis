@@ -255,6 +255,7 @@ A unit root (also called a unit root process or a difference stationary process)
         import matplotlib.pyplot as plt
         import numpy as np
         from statsmodels.tsa.stattools import adfuller
+        
         ```
         * ADf 
         ```
