@@ -237,8 +237,8 @@ df =pd.DataFrame({"a":[13,5,11,12,9,12,14,7,15]})
     - If the mean is not constant: Take the derivative of the series
 
 4. #### [What are the unite roots]()
-        A unit root (also called a unit root process or a difference stationary process) is a stochastic trend in a time series, sometimes called a “random walk with drift”; If a time series has a unit root, it shows a systematic pattern that is unpredictable.
-    1. ### What is a Unit Root Test?
+A unit root (also called a unit root process or a difference stationary process) is a stochastic trend in a time series, sometimes called a random walk with drift”; If a time series has a unit root, it shows a systematic pattern that is unpredictable.
+5. #### What is a Unit Root Test?
         - The Dickey Fuller Test (sometimes called a Dickey Pantula test), which is based on linear regression. Serial correlation can be an issue, in which case the Augmented Dickey-Fuller (ADF) test can be used. The ADF handles bigger, more complex models. It does have the downside of a fairly high Type I error rate.
         - The Elliott–Rothenberg–Stock Test, which has two subtypes:
             - The P-test takes the error term’s serial correlation into account,
