@@ -250,7 +250,18 @@ A unit root (also called a unit root process or a difference stationary process)
 
 5.  #### [Augument Dickey -Fuller Test](https://www.statology.org/dickey-fuller-test-python/)
     - Coding of dickey-fuller test
-        * 
+        * Library
+        ```
+        import matplotlib.pyplot as plt
+        import numpy as np
+        from statsmodels.tsa.stattools import adfuller
+        ```
+        * ADf 
+        ```
+        df_adf = adfuller(series)
+        print('ADF Statistic: %f' % df_adf[0])
+        print('p-value: %f' % df_adf[1])
+        ```
 
 
 
