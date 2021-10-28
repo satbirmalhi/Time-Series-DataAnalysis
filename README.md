@@ -220,6 +220,50 @@ df =pd.DataFrame({"a":[13,5,11,12,9,12,14,7,15]})
 6. Now repeat the above codes with actual stock market data. 
 
 #### [What is Stationary time series](https://otexts.com/fpp2/stationarity.html)
+    
+- The stationary time series has the following three properties
+    - The mean values is constant 
+    - The variance of the series is constant 
+    - There is no seasonality 
+        - Note: White noise is a stationary time series with mean zero
+1. #### Give the examples of non-stationary time series
+    
+2. #### Methods of finding the Stationarity of a time series
+    - Visually 
+    - Golbal vs Local test 
+    - Augument Dickey -Fuller Test
+
+3. #### How to make a time series Stationary 
+    - If the mean is not constant: Take the derivative of the series
+
+4. #### [What are the unite roots]()
+A unit root (also called a unit root process or a difference stationary process) is a stochastic trend in a time series, sometimes called a random walk with drift”; If a time series has a unit root, it shows a systematic pattern that is unpredictable.
+
+5. #### What is a Unit Root Test?
+    - The Dickey Fuller Test (sometimes called a Dickey Pantula test), which is based on linear regression. Serial correlation can be anissue,  in which case the Augmented Dickey-Fuller (ADF) test can be used. The ADF handles bigger, more complex models. It does have the downside of a fairly high Type I error rate.
+        - The Elliott–Rothenberg–Stock Test, which has two subtypes:
+            - The P-test takes the error term’s serial correlation into account,
+            - The DF-GLS test can be applied to detrended data without intercept.
+        - The Schmidt–Phillips Test includes the coefficients of the deterministic variables in the null and alternate hypotheses. Subtypes   are  the rho-test and the tau-test.
+        - The Phillips–Perron (PP) Test is a modification of the Dickey Fuller test, and corrects for autocorrelation and heteroscedasticity in the errors.
+        - The Zivot-Andrews test allows a break at an unknown point in the intercept or linear trend.
+
+5.  #### [Augument Dickey -Fuller Test](https://www.statology.org/dickey-fuller-test-python/)
+    - Coding of dickey-fuller test
+        * Library
+        ```
+        import matplotlib.pyplot as plt
+        import numpy as np
+        from statsmodels.tsa.stattools import adfuller
+
+        ```
+        * ADf 
+        ```
+        data = [3, 4, 4, 5, 6, 7, 6, 6, 7, 8, 9, 12, 10]
+        Result_adf = adfuller(data)
+        print('ADF Statistic: %f' % Result_adf[0])
+        print('p-value: %f' % Result_adf[1])
+        ```
 
 
 
