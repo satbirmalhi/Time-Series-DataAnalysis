@@ -268,7 +268,8 @@ A unit root (also called a unit root process or a difference stationary process)
 6. #### [White Noise](https://machinelearningmastery.com/white-noise-time-series-python/)
 7. #### [Lag operator]()
 ### [Autoregressive Model](https://maryclare.github.io/atsa/content/notes/notes_3.pdf)<a name="AR-model"></a>
-    * Libraries 
+    
+* Libraries 
     ```
     import pandas as pd
     import numpy as np
