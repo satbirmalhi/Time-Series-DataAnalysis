@@ -16,7 +16,8 @@ Fourier Analysis in data science across the campus.
 2. [Data importation](#Data-importation)
     1. [Web scraping](#Web-scraping)
 3. [Linear Regression](#Linear-Regression)
-4. [Time Series Analysis](#time-series) 
+4. [Time Series Analysis](#time-series)
+5. [AR Model](#AR-model)
 
 ------------------------------------------------------------------
 ## Framework <a name="infrastructure"></a>
@@ -266,7 +267,7 @@ A unit root (also called a unit root process or a difference stationary process)
         ```
 6. #### [White Noise](https://machinelearningmastery.com/white-noise-time-series-python/)
 7. #### [Lag operator]()
-8. #### [Autoregressive Model](https://maryclare.github.io/atsa/content/notes/notes_3.pdf)
+### [Autoregressive Model](https://maryclare.github.io/atsa/content/notes/notes_3.pdf)<a name="AR-model"></a>
     * Libraries 
     ```
     import pandas as pd
@@ -301,7 +302,7 @@ A unit root (also called a unit root process or a difference stationary process)
     end_date = datetime(2020,1,1)
     df = df[start_date:end_date]
     ```
-    * Plot of error 
+    * #### Plot of data
     ```
     plt.figure(figsize=(10,4))
     plt.plot(df)
